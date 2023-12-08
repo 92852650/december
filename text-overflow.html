@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css"/>
+        <meta charset="UTF-8"/>
+        <title>text-overflow</title>
+    </head>
+    <body>
+        <h4 class="STYLE">TEXT-OVERFLOW</h4>
+        <h5>La propriété text-overflow définit la façon dont le contenu textuel qui dépasse d'une boîte est
+             signalé pour les utilisateurs
+            . Le texte peut être rogné (clipping), 
+            afficher une ellipse ('…', U+2026 Horizontal Ellipsis) ou afficher une chaîne de caractères choisie.</h5>
+        
+        <h6>CSS</h6>
+         <pre><code>/* On gère le dépassement en fin de ligne
+            - à droite en LTR,
+            - à gauche en RTL */
+        text-overflow: clip;
+        text-overflow: ellipsis;
+        text-overflow: "…";
+        text-overflow: fade;
+        text-overflow: fade(10px);
+        text-overflow: fade(5%);
+        
+        /* On gère le dépassement au début et
+           à la fin de la ligne. La directionnalité
+           n'a pas d'importance */
+        text-overflow: clip ellipsis;
+        text-overflow: "…" "…";
+        text-overflow: fade clip;
+        text-overflow: fade(10px) fade(10px);
+        text-overflow: fade(5%) fade(5%);
+        
+        /* Valeurs globales */
+        text-overflow: inherit;
+        text-overflow: initial;
+        text-overflow: unset;</code></pre>
+    </body>
+</html>
